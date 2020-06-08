@@ -17,6 +17,3 @@ RUN yum install -y \
 
 ENV JAVA_HOME /etc/alternatives/jre
 
-
-
-CMD [ "/run-java.sh" ]
