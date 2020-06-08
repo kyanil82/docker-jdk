@@ -1,13 +1,6 @@
-FROM centos:7
+FROM centos
 
-
-RUN yum update -y && \
-yum install -y wget && \
-yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
-yum clean all
-
-ENV HOME /root
-
-WORKDIR /root
-
-CMD ["bash"]
+RUN yum install -y \
+java-1.8.0-openjdk \
+java-1.8.0-openjdk-devel
+ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk/
