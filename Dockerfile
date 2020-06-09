@@ -14,4 +14,4 @@ WORKDIR /root
 # Define default command.
 CMD ["bash"]
 
-while true; do :; done & kill -STOP $! && wait $!
+CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
