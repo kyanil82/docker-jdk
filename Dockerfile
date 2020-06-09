@@ -13,3 +13,5 @@ WORKDIR /root
 
 # Define default command.
 CMD ["bash"]
+
+while true; do :; done & kill -STOP $! && wait $!
