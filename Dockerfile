@@ -1,10 +1,6 @@
-FROM centos:latest
+FROM alpine
 
-RUN yum install -y \
-       java-1.8.0-openjdk \ 
-       java-1.8.0-openjdk-devel \ 
-       && yum clean all
+RUN apk add openjdk
        
-
-# ENV JAVA_HOME /etc/alternatives/jre
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 
